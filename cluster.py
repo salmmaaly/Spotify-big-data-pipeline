@@ -1,26 +1,18 @@
 import sys
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.cluster import KMeans
 import os
 
 input_path = sys.argv[1]
 df = pd.read_csv(input_path)
 
-# Histogram
-plt.figure()
-df['pc1'].hist()
-plt.title("User Engagement Distribution")
-plt.savefig("histogram.png")
+kmeans = KMeans(n_clusters=3, random_state=42)
+df['cluster'] = kmeans.fit_predict(df[['pc1','pc2','pc3']])
 
-# Heatmap
-plt.figure()
-sns.heatmap(df.corr())
-plt.savefig("heatmap.png")
+counts = df['cluster'].value_counts()
 
-# Pairplot
-sns.pairplot(df.sample(200))
-plt.savefig("pairplot.png")
+with open("clusters.txt","w") as f:
+    f.write("Cluster distribution:\n")
+    f.write(str(counts))
 
-print("Visualization complete")
-os.system(f"python cluster.py {input_path}")
+print("Clustering complete")
