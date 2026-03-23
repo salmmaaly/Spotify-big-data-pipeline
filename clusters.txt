@@ -1,0 +1,6 @@
+Cluster distribution:
+cluster
+0    21187
+2    18125
+1    10688
+Name: count, dtype: int64
