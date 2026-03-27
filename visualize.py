@@ -25,24 +25,11 @@ plt.savefig("heatmap.png")
 plt.show() 
 
 
-# Pairplot
-print("Creating pairplot...")
-
-try:
-    sample_df = df.sample(100)
-
-    pairplot = sns.pairplot(sample_df)
-    pairplot.fig.suptitle("Pairplot of Features", y=1.02)  # optional title
-
-    pairplot.savefig("C:/Users/DELL/OneDrive/Desktop/BigData1/pairplot.png")
-
-    print("Pairplot saved successfully")
-    plt.show() 
-    
-
-except Exception as e:
-    print("Error in pairplot:", e)
-
+# Scatter plot
+plt.figure()
+sns.scatterplot(x=df['pc1'], y=df['pc2'])
+plt.title("PC1 vs PC2 (User Behavior Clusters)")
+plt.savefig("scatter.png")
 print("Visualization complete")
 
 
