@@ -30,6 +30,9 @@ plt.figure()
 sns.scatterplot(x=df['pc1'], y=df['pc2'])
 plt.title("PC1 vs PC2 (User Behavior Clusters)")
 plt.savefig("scatter.png")
+plt.show()
+
+
 print("Visualization complete")
 
 
