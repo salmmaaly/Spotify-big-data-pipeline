@@ -1,7 +1,7 @@
 import sys
 import pandas as pd
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt  # <- you need this
+import matplotlib.pyplot as plt 
 
 input_path = sys.argv[1]
 df = pd.read_csv(input_path)
