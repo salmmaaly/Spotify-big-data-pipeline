@@ -33,7 +33,7 @@ plt.savefig("scatter.png")
 plt.show()
 
 
-print("Visualization complete")
+print("Visualization complete finally!")
 
 
 #os.system(f"python cluster.py {input_path}")
