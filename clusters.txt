@@ -1,6 +1,6 @@
 Cluster distribution:
 cluster
-0    23542
-1    15795
-2    10663
+0    27384
+1    11930
+2    10686
 Name: count, dtype: int64

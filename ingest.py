@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 
-input_path = r"C:\Users\DELL\OneDrive\Desktop\BigData1\spotify_user_behavior_realistic_50000_rows.csv"
+iinput_path = sys.argv[1]
 df = pd.read_csv(input_path)
 print(df.head())
 
